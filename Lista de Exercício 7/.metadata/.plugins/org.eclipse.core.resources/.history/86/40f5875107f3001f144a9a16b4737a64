@@ -1,0 +1,48 @@
+package exercicio;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class TecAdmin extends Funcionario {
+	private double adicionalNoturno;
+	private List<Processo> processos;
+
+	public TecAdmin(int registro, String nome, String dataAdmissao, double salarioBase, double adicionalNoturno) {
+		super(registro, nome, dataAdmissao, salarioBase);
+
+		processos = new ArrayList<Processo>();
+		this.adicionalNoturno = adicionalNoturno;
+	}
+
+	public double getAdicionalNoturno() {
+		return adicionalNoturno;
+	}
+
+	public void setAdicionalNoturno(double adicionalNoturno) {
+		this.adicionalNoturno = adicionalNoturno;
+	}
+
+	public List<Processo> getProcessos() {
+		return processos;
+	}
+
+	public void setProcessos(List<Processo> processos) {
+		this.processos = processos;
+	}
+
+	public void adicionarProcesso(Processo processo) {
+		
+	}
+	
+	@Override
+	public void removerRotina(int codigoRemover) {
+		
+	}
+
+	@Override
+	public void calcularSalario() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

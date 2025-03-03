@@ -1,0 +1,13 @@
+package exercicio;
+
+public class Pix {
+	private int chavePix;
+	private String nomeDestinatario;
+
+	@Override
+	public void efetuarPagameto() {
+		System.out.println("Numero do Cartão: ", +this.chavePix);
+		System.out.println("Nome do Titutar: ", +this.nomeDestinatario);
+		System.out.println("Data de validade: ", +this.dataValidade);
+	}
+}

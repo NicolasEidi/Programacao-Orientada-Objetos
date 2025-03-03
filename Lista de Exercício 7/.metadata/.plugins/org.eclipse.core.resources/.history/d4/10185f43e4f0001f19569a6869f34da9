@@ -1,0 +1,18 @@
+package exercicio;
+
+public class Main {
+	public static void main(String[] args) {
+		Circulo circulo = new Circulo(3);
+		Quadrado quadrado = new Quadrado(5);
+		Retangulo retangulo = new Retangulo(5, 2);
+		
+		System.out.println("Circulo area: " + circulo.calcularArea());
+		System.out.println("Circulo perimetro: \n" + circulo.calcularPerimetro());
+		
+		System.out.println("Quadrado area: " + quadrado.calcularArea());
+		System.out.println("Quadrado perimetro: \n" + quadrado.calcularPerimetro());
+		
+		System.out.println("Retangulo area: " + retangulo.calcularArea());
+		System.out.println("Retangulo perimetro: \n" + retangulo.calcularPerimetro());
+	}
+}

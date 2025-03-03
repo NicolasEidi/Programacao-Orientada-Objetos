@@ -1,0 +1,6 @@
+package exercicio;
+
+public class Retangulo {
+	private int lado;
+	private int altura;
+}

@@ -1,0 +1,14 @@
+package exercicio;
+
+public class Quadrado {
+	private int lado;
+
+	public Quadrado(int lado) {
+		this.lado = lado;
+	}
+	
+	double calcularArea() {
+		
+	}
+	abstract double calcularPerimetro();
+}

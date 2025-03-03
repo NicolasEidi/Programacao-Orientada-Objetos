@@ -1,0 +1,21 @@
+package exercicio;
+
+public class Endereco {
+	private String logradouro;
+	private int numResidencia;
+	private String bairro;
+	private int cep;
+	private String cidade;
+	private String uf;
+
+	public Endereco(String logradouro, int numResidencia, String bairro, int cep, String cidade, String uf) {
+		super();
+		this.logradouro = logradouro;
+		this.numResidencia = numResidencia;
+		this.bairro = bairro;
+		this.cep = cep;
+		this.cidade = cidade;
+		this.uf = uf;
+	}
+
+}

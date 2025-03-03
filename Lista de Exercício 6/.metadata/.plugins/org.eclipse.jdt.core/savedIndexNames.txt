@@ -1,0 +1,9 @@
+INDEX VERSION 1.134+C:\Users\Scheissen\Desktop\Pasta\Estudos\Java - UTFPR\Lista 6\.metadata\.plugins\org.eclipse.jdt.core
+2420055680.index
+1865797976.index
+2117173164.index
+240880419.index
+2538789529.index
+1069026906.index
+154554170.index
+3763726863.index

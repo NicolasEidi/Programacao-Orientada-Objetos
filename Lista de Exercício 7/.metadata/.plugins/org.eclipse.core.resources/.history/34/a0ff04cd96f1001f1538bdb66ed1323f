@@ -1,0 +1,7 @@
+package exercicio;
+
+public abstract class FormaPagamento {
+	protected int valorTotalCompra;
+	
+	abstract efetuarPagamento();
+}

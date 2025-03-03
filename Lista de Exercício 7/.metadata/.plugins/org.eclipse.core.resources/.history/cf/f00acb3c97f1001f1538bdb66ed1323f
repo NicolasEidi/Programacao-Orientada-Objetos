@@ -1,0 +1,6 @@
+package exercicio;
+
+public class Boleto extends FormaPagamento{
+	private String dataVencimento;
+	private int codBarras;
+}

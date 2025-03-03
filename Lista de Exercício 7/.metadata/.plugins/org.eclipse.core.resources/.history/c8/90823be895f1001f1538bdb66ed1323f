@@ -1,0 +1,11 @@
+package exercicio;
+
+public class CartaoDeCredito {
+	int numeroCartao;
+	String nomeTitular;
+	int dataValidade
+	
+	public void efetuarPagameto() {
+		
+	}
+}

@@ -1,0 +1,13 @@
+package exercicio;
+
+public class Circulo {
+	
+	
+	abstract double calcularArea() {
+		
+	}
+	
+	abstract double calcularPerimetro() {
+		
+	}
+}

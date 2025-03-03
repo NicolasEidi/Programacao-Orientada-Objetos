@@ -1,0 +1,106 @@
+package exercicio;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public abstract class Funcionario {
+	private int registro;
+	private String nome;
+	private String dataAdmissao;
+	private double salarioBase;
+
+	public Funcionario(int registro, String nome, String dataAdmissao, double salarioBase) {
+		this.registro = registro;
+		this.nome = nome;
+		this.dataAdmissao = dataAdmissao;
+		this.salarioBase = salarioBase;
+	}
+
+	public int getRegistro() {
+		return registro;
+	}
+
+	public void setRegistro(int registro) {
+		this.registro = registro;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getDataAdmissao() {
+		return dataAdmissao;
+	}
+
+	public void setDataAdmissao(String dataAdmissao) {
+		this.dataAdmissao = dataAdmissao;
+	}
+
+	public double getSalarioBase() {
+		return salarioBase;
+	}
+
+	public void setSalarioBase(double salarioBase) {
+		this.salarioBase = salarioBase;
+	}
+	
+	
+	public void removerDisciplina(int codigoRemover) {
+		List<Disciplina> disciplinasRemover = new ArrayList<>();
+
+		for (Disciplina disciplina : disciplinas) {
+			if (codigoRemover == disciplina.getCodigo()) {
+				disciplinasRemover.add(disciplina);
+			}
+		}
+		disciplinas.removeAll(disciplinasRemover);
+	}
+
+	public void calcularSalario() {
+		double salario;
+		int totalHoras = 0;
+		double valorHoras;
+
+		if (this.getTitulacao().equals("Mestrado")) {
+			salario = (this.getSalarioBase() + 1000);
+
+			for (Disciplina disciplina : disciplinas) {
+				totalHoras = totalHoras + disciplina.getCargaHoraria();
+			}
+
+			valorHoras = (double) (totalHoras * 15);
+
+			System.out.printf("\nCarga horaria de %d horas, totalizando %.02f em ganhos\n", totalHoras, valorHoras);
+			System.out.printf("Salario com gratificação de Mestrado é %.02f", (salario + valorHoras));
+		}
+
+		else if (this.getTitulacao().equals("Doutorado")) {
+			salario = (this.getSalarioBase() + 2000);
+
+			for (Disciplina disciplina : disciplinas) {
+				totalHoras = totalHoras + disciplina.getCargaHoraria();
+			}
+
+			valorHoras = (double) (totalHoras * 15);
+
+			System.out.printf("\nCarga horaria de %d horas, totalizando %.02f em ganhos\n", totalHoras, valorHoras);
+			System.out.printf("Salario com gratificação de Doutorado é %.02f", (salario + valorHoras));
+		}
+
+		else {
+			for (Disciplina disciplina : disciplinas) {
+				totalHoras = totalHoras + disciplina.getCargaHoraria();
+			}
+
+			valorHoras = (double) (totalHoras * 15);
+
+			System.out.printf("\nCarga horaria de %d horas, totalizando %.02f em ganhos\n", totalHoras, valorHoras);
+			System.out.printf("Salario sem gratificação é de %.02f", (this.getSalarioBase() + valorHoras));
+		}
+	}
+
+}

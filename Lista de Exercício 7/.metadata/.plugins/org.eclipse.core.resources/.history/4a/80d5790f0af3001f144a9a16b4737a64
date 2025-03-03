@@ -1,0 +1,45 @@
+package exercicio;
+
+public class Main {
+	public static void main(String[] args) {
+		Professor professor = new Professor(111, "Jose", "26/03/2001", 5000, "Doutorado");
+		
+		Disciplina disciplina1 = new Disciplina(285, "Pre calculo", "coisas de pre calculo", 60);
+		Disciplina disciplina2 = new Disciplina(155, "calculo 1", "coisas de calculo", 60);
+		
+		
+		//Testes professor
+		professor.adicionarRotina(disciplina1);
+		professor.adicionarRotina(disciplina2);
+		for (Disciplina disciplina : professor.getDisciplinas()) {
+			System.out.println(disciplina.getNomeDisciplina());
+		}
+		
+		professor.removerRotina(285);
+		for (Disciplina disciplina : professor.getDisciplinas()) {
+			System.out.println(disciplina.getNomeDisciplina());
+		}
+
+		//professor.removerDisciplina(155);
+		professor.calcularSalario();
+		
+		TecAdmin tecnicoAdministrativo = new TecAdmin(222, "Marcos", "10/08/2013", 3500, 400);
+		
+		Processo processo1 = new Processo(266, "coisas do processo 1", "22/12/2020");
+		Processo processo2 = new Processo(189, "coisas do processo 2", "06/05/2021");
+		
+		tecnicoAdministrativo.adicionarProcesso(processo1);
+		tecnicoAdministrativo.adicionarProcesso(processo2);
+		
+		System.out.println("\nTecnico Administrativo\n");
+		tecnicoAdministrativo.calcularSalario();
+		
+		for (Processo processo : tecnicoAdministrativo.getProcessos()) {
+			System.out.println(processo.getDescricao());
+		}
+		
+		
+		
+		
+	}
+}

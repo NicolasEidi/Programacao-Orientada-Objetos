@@ -1,0 +1,9 @@
+package exercicio;
+
+abstract class FormaGeometrica {
+	
+	
+	abstract double calcularArea();
+	abstract double calcularPerimetro();
+
+}

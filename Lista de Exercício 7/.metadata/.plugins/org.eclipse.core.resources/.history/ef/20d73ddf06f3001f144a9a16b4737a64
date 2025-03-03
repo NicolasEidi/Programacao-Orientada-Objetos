@@ -1,0 +1,12 @@
+package exercicio;
+
+public class TecAdmin extends Funcionario{
+	private double adicionalNoturno;
+	private List<Processo> processos;
+	public TecAdmin(int registro, String nome, String dataAdmissao, double salarioBase, double adicionalNoturno) {
+		super(registro, nome, dataAdmissao, salarioBase);
+		this.adicionalNoturno = adicionalNoturno;
+	}
+	
+	
+}

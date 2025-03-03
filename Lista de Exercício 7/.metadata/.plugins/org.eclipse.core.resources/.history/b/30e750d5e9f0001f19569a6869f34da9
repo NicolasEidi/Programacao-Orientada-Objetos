@@ -1,0 +1,18 @@
+package exercicio;
+
+public abstract class FormaGeometrica {
+	protected String cor;
+
+	protected String getCor() {
+		return cor;
+	}
+
+	protected void setCor(String cor) {
+		this.cor = cor;
+	}
+
+	abstract double calcularArea();
+
+	abstract double calcularPerimetro();
+
+}

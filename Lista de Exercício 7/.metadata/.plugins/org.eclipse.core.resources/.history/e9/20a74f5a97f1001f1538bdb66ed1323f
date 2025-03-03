@@ -1,0 +1,12 @@
+package exercicio;
+
+public class Boleto extends FormaPagamento{
+	private String dataVencimento;
+	private int codBarras;
+	
+	public void efetuarPagameto() {
+		System.out.println("Data de Vencimento: ", +this.dataVencimento);
+		System.out.println("Codigo de Barras: ", +this.codBarras);
+		System.out.println("Valor total da compra: ", +this.valorTotalCompra);
+	}
+}

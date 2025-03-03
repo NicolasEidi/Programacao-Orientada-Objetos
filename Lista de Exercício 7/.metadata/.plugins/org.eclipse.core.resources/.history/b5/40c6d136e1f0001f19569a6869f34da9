@@ -1,0 +1,17 @@
+package exercicio;
+
+public class Quadrado {
+	private int lado;
+
+	public Quadrado(int lado) {
+		this.lado = lado;
+	}
+	
+	@Override
+	public double calcularArea() {
+		
+	}
+	
+	@Override
+	public double calcularPerimetro();
+}

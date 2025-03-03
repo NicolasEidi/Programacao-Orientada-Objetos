@@ -1,0 +1,13 @@
+package exercicio;
+
+public class CartaoDeCredito {
+	private int numeroCartao;
+	private String nomeTitular;
+	private String dataValidade;
+	private int codSeguranca;
+	
+	@Override
+	public void efetuarPagameto() {
+		System.out.println("Numero do Cartão: ", + this.numeroCartao);
+	}
+}

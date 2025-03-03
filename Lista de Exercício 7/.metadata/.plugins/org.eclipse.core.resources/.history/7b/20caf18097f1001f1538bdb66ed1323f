@@ -1,0 +1,14 @@
+package exercicio;
+
+public class Pix extends FormaPagamento{
+	private int chavePix;
+	private String nomeDestinatario;
+
+	@Override
+	public void efetuarPagameto() {
+		System.out.println("Chave PIX: ", +this.chavePix);
+		System.out.println("Nome do Destinatario: ", +this.nomeDestinatario);
+		System.out.println("Valor total da compra: ", +this.valorTotalCompra);
+	
+	}
+}

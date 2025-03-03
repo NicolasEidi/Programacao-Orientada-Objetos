@@ -1,0 +1,20 @@
+package exercicio;
+
+public abstract class FormaPagamento {
+	protected int valorTotalCompra;
+
+	public FormaPagamento(int valorTotalCompra) {
+		super();
+		this.valorTotalCompra = valorTotalCompra;
+	}
+
+	protected int getValorTotalCompra() {
+		return valorTotalCompra;
+	}
+
+	protected void setValorTotalCompra(int valorTotalCompra) {
+		this.valorTotalCompra = valorTotalCompra;
+	}
+
+	abstract void efetuarPagamento();
+}

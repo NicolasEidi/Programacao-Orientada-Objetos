@@ -1,0 +1,42 @@
+package exercicio;
+
+public abstract class Cliente extends Endereco {
+	private String nome;
+	private String dataNascimento;
+	private int telefone;
+
+	public Cliente(String logradouro, int numResidencia, String bairro, int cep, String cidade, String uf, String nome,
+			String dataNascimento, int telefone) {
+		super(logradouro, numResidencia, bairro, cep, cidade, uf);
+		this.nome = nome;
+		this.dataNascimento = dataNascimento;
+		this.telefone = telefone;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getDataNascimento() {
+		return dataNascimento;
+	}
+
+	public void setDataNascimento(String dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+
+	public int getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(int telefone) {
+		this.telefone = telefone;
+	}
+
+	protected abstract Cliente getDependente();
+
+}

@@ -1,0 +1,12 @@
+package exercicio;
+
+public class Socio extends Cliente {
+	private Dependente dependente;
+	private int cpf;
+
+
+
+	public void adicionarDependente(String nome, String dataNascimento, int telefone, Endereco endereco) {
+		this.setDependente(new Dependente(nome, dataNascimento, telefone, endereco));
+	}
+}

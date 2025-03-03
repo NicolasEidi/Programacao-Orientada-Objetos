@@ -1,0 +1,13 @@
+package exercicio;
+
+public class Main {
+	public static void main(String[] args) {
+		Circulo circulo = new Circulo(3);
+		Quadrado quadrado = new Quadrado(5);
+		
+		System.out.println("Circulo area: " + circulo.calcularArea());
+		System.out.println("Circulo perimetro: " + circulo.calcularPerimetro());
+		
+		System.out.println("Quadrado area: " + quadrado.calcularArea());
+	}
+}

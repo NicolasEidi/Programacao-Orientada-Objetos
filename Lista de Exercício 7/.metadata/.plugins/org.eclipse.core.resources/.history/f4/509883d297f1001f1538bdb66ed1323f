@@ -1,0 +1,17 @@
+package exercicio;
+
+public class CartaoDeCredito extends FormaPagamento {
+	private int numeroCartao;
+	private String nomeTitular;
+	private String dataValidade;
+	private int codSeguranca;
+	
+	@Override
+	public void efetuarPagameto() {
+		System.out.println("Numero do Cartão: ", + this.numeroCartao);
+		System.out.println("Nome do Titutar: ", + this.nomeTitular);
+		System.out.println("Data de validade: ", + this.dataValidade);
+		System.out.println("Codigo de segurança: ", + this.codSeguranca);
+		System.out.println("Valor total da compra: ", + this.valorTotalCompra);
+	}
+}

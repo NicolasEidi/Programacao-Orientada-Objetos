@@ -1,0 +1,16 @@
+package exercicio;
+
+public abstract class Circulo extends FormaGeometrica{
+	static double PI = 3.14; 
+	private int raio;
+	
+	
+	
+	public double calcularArea() {
+		return (PI * (this.raio * this.raio));
+	}
+	
+	public double calcularPerimetro() {
+		return (2 * PI * this.raio);
+	}
+}

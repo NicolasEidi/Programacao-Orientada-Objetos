@@ -1,0 +1,12 @@
+package aaaaa;
+
+public class Main {
+	public static void main(String[] args){
+		double nota1 = 5;
+		
+			if (nota1 < 7) {
+				throw new Reprovado("Aluno reprovado");
+			}
+		
+	}
+}

@@ -1,0 +1,6 @@
+package exercicio;
+
+public class TecAdmin extends Funcionario{
+	private double adicionalNoturno;
+	private List<Processo> processos;
+}

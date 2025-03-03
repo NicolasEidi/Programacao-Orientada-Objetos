@@ -1,0 +1,58 @@
+package exercicio;
+
+public class CartaoDeCredito extends FormaPagamento {
+	private int numeroCartao;
+	private String nomeTitular;
+	private String dataValidade;
+	private int codSeguranca;
+
+	public CartaoDeCredito(int valorTotalCompra, int numeroCartao, String nomeTitular, String dataValidade,
+			int codSeguranca) {
+		super(valorTotalCompra);
+		this.numeroCartao = numeroCartao;
+		this.nomeTitular = nomeTitular;
+		this.dataValidade = dataValidade;
+		this.codSeguranca = codSeguranca;
+	}
+
+	protected int getNumeroCartao() {
+		return numeroCartao;
+	}
+
+	protected void setNumeroCartao(int numeroCartao) {
+		this.numeroCartao = numeroCartao;
+	}
+
+	protected String getNomeTitular() {
+		return nomeTitular;
+	}
+
+	protected void setNomeTitular(String nomeTitular) {
+		this.nomeTitular = nomeTitular;
+	}
+
+	protected String getDataValidade() {
+		return dataValidade;
+	}
+
+	protected void setDataValidade(String dataValidade) {
+		this.dataValidade = dataValidade;
+	}
+
+	protected int getCodSeguranca() {
+		return codSeguranca;
+	}
+
+	protected void setCodSeguranca(int codSeguranca) {
+		this.codSeguranca = codSeguranca;
+	}
+
+	@Override
+	public void efetuarPagameto() {
+		System.out.println("Numero do Cartão: ", +this.numeroCartao);
+		System.out.println("Nome do Titutar: ", +this.nomeTitular);
+		System.out.println("Data de validade: ", +this.dataValidade);
+		System.out.println("Codigo de segurança: ", +this.codSeguranca);
+		System.out.println("Valor total da compra: ", +this.valorTotalCompra);
+	}
+}

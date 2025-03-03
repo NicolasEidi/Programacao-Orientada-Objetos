@@ -1,0 +1,9 @@
+package exercicio;
+
+public abstract class Cliente extends Endereco{
+	private String nome;
+	private String dataNascimento;
+	private int telefone;
+	
+	
+}

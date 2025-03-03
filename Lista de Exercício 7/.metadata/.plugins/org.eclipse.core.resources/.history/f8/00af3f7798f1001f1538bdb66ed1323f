@@ -1,0 +1,7 @@
+package exercicio;
+
+public class Main {
+	public static void main(String[] args) {
+		CartaoDeCredito cartao = new CartaoDeCredito(200, 123, "Jose", "29/12", 1233);
+	}
+}

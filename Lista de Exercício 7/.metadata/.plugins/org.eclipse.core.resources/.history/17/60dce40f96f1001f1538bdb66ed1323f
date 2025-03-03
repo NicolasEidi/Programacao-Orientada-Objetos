@@ -1,0 +1,6 @@
+package exercicio;
+
+public class Pix {
+	private int chavePix;
+	private String nomeDestinatario;
+}

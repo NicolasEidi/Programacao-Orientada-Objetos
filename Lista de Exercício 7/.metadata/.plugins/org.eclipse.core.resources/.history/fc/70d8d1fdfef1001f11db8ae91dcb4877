@@ -1,0 +1,10 @@
+package exercicio;
+
+public class Endereco {
+	private String logradouro;
+	private int numResidencia;
+	private String bairro;
+	private int cep;
+	private String cidade;
+	private String fu;
+}

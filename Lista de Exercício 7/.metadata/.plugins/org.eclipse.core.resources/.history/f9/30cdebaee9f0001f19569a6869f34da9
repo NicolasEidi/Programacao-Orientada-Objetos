@@ -1,0 +1,10 @@
+package exercicio;
+
+public abstract class FormaGeometrica {
+	protected String cor;
+
+	abstract double calcularArea();
+
+	abstract double calcularPerimetro();
+
+}

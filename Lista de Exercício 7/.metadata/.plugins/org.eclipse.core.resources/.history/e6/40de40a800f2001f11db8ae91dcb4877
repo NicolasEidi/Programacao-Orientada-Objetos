@@ -1,0 +1,25 @@
+package exercicio;
+
+public class Socio extends Cliente {
+	private Dependente dependente;
+
+	public Socio(String logradouro, int numResidencia, String bairro, int cep, String cidade, String uf, String nome,
+			String dataNascimento, int telefone, Dependente dependente) {
+		super(logradouro, numResidencia, bairro, cep, cidade, uf, nome, dataNascimento, telefone);
+		this.dependente = dependente;
+	}
+
+	public Dependente getDependente() {
+		return dependente;
+	}
+
+	public void setDependente(Dependente dependente) {
+		this.dependente = dependente;
+	}
+
+	public void adicionarDependente(String logradouro, int numResidencia, String bairro, int cep, String cidade,
+			String uf, String nome, String dataNascimento, int telefone) {
+		this.setDependente(
+				new Dependente(logradouro, numResidencia, bairro, cep, cidade, uf, nome, dataNascimento, telefone));
+	}
+}

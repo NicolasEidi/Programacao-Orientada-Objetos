@@ -1,0 +1,16 @@
+package exercicio;
+
+public class Trapezio {
+	private int baseMaior;
+	private int baseMenor;
+	
+	@Override
+	public double calcularArea() {
+		return (this.lado * this.altura);
+	}
+	
+	@Override
+	public double calcularPerimetro() {
+		return ((2 * this.lado) + (2 * this.altura));
+	}
+}

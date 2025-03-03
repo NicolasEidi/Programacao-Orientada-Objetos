@@ -1,0 +1,120 @@
+package exercicio;
+
+public class Filme {
+	private String titulo;
+	private int duracao;
+	private double precoLocacao;
+	private double valorAtraso;
+
+	private int diaLocacao; 2
+	private int diaPrevistoDevolucao; 5
+	private int diaDevolucao;  7
+
+	private Cliente locador = null;
+
+	public Filme(String titulo, int duracao, double precoLocacao, double valorAtraso, int diaLocacao,
+			int diaPrevistoDevolucao, int diaDevolucao, Cliente locador) {
+		super();
+		this.titulo = titulo;
+		this.duracao = duracao;
+		this.precoLocacao = precoLocacao;
+		this.valorAtraso = valorAtraso;
+		this.diaLocacao = diaLocacao;
+		this.diaPrevistoDevolucao = diaPrevistoDevolucao;
+		this.diaDevolucao = diaDevolucao;
+		this.locador = locador;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public int getDuracao() {
+		return duracao;
+	}
+
+	public void setDuracao(int duracao) {
+		this.duracao = duracao;
+	}
+
+	public double getPrecoLocacao() {
+		return precoLocacao;
+	}
+
+	public void setPrecoLocacao(double precoLocacao) {
+		this.precoLocacao = precoLocacao;
+	}
+
+	public double getValorAtraso() {
+		return valorAtraso;
+	}
+
+	public void setValorAtraso(double valorAtraso) {
+		this.valorAtraso = valorAtraso;
+	}
+
+	public int getDiaLocacao() {
+		return diaLocacao;
+	}
+
+	public void setDiaLocacao(int diaLocacao) {
+		this.diaLocacao = diaLocacao;
+	}
+
+	public int getDiaPrevistoDevolucao() {
+		return diaPrevistoDevolucao;
+	}
+
+	public void setDiaPrevistoDevolucao(int diaPrevistoDevolucao) {
+		this.diaPrevistoDevolucao = diaPrevistoDevolucao;
+	}
+
+	public int getDiaDevolucao() {
+		return diaDevolucao;
+	}
+
+	public void setDiaDevolucao(int diaDevolucao) {
+		this.diaDevolucao = diaDevolucao;
+	}
+
+	public Cliente getLocador() {
+		return locador;
+	}
+
+	public void setLocador(Cliente locador) {
+		this.locador = locador;
+	}
+	
+	
+	public void AlugarFilme(Cliente cliente, int diaLocacao, int diaDevolucao) {
+		if (cliente instanceof Socio || cliente instanceof Dependente) {
+			if (this.locador == null) {
+				this.locador = cliente;
+				this.diaLocacao = diaLocacao;
+				this.diaPrevistoDevolucao = diaLocacao + 3;
+				this.diaDevolucao = diaDevolucao;
+			}
+		}
+		else {
+			System.out.println("\nEste cliente não tem permissão para alugar um filme");
+		}	
+	}
+	
+	public void DevolverFilme(Cliente cliente) {
+		if (this.locador != null) {
+			if(this.diaDevolucao > this.diaPrevistoDevolucao) {
+				double multa = 3.5;
+				System.out.println("O dia de devolução passou do limite, a multa sera de 3,50 por dia de atraso");
+				System.out.println("Multa: " + ((this.diaDevolucao - this.diaPrevistoDevolucao) * multa));
+			}
+			this.locador = null;
+			this.diaLocacao = 0;
+			this.diaPrevistoDevolucao = 0;
+			this.diaDevolucao = 0;
+		}
+	}
+}

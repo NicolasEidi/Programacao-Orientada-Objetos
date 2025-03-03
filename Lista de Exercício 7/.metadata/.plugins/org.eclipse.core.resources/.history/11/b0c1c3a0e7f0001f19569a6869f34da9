@@ -1,0 +1,26 @@
+package exercicio;
+
+public class Main {
+	public static void main(String[] args) {
+		Circulo circulo = new Circulo(3);
+		Quadrado quadrado = new Quadrado(5);
+		Retangulo retangulo = new Retangulo(5, 2);
+		Trapezio trapezio = new Trapezio(10, 5);
+		Losango losango = new Losango(10, 5);
+		
+		System.out.println("\nCirculo area: " + circulo.calcularArea());
+		System.out.println("Circulo perimetro: " + circulo.calcularPerimetro());
+		
+		System.out.println("\nQuadrado area: " + quadrado.calcularArea());
+		System.out.println("Quadrado perimetro: " + quadrado.calcularPerimetro());
+		
+		System.out.println("\nRetangulo area: " + retangulo.calcularArea());
+		System.out.println("Retangulo perimetro: " + retangulo.calcularPerimetro());
+		
+		System.out.println("\nQuadrado area: " + quadrado.calcularArea());
+		System.out.println("Quadrado perimetro: " + quadrado.calcularPerimetro());
+		
+		System.out.println("\nRetangulo area: " + retangulo.calcularArea());
+		System.out.println("Retangulo perimetro: " + retangulo.calcularPerimetro());
+	}
+}

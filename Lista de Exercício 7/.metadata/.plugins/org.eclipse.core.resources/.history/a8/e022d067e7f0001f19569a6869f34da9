@@ -1,0 +1,23 @@
+package exercicio;
+
+public class Trapezio extends FormaGeometrica{
+	private int baseMaior;
+	private int baseMenor;
+	private int altura;
+	
+	public Trapezio(int baseMaior, int baseMenor) {
+		this.baseMaior = baseMaior;
+		this.baseMenor = baseMenor;
+	}
+
+	@Override
+	public double calcularArea() {
+		return (this.altura * (this.baseMenor* this.baseMaior));
+	}
+	
+	@Override
+	public double calcularPerimetro() {
+		double lado = (double)Math.sqrt(Math.pow((this.baseMaior - this.baseMenor) / 2, 2) + Math.pow(this.altura, 2));
+		return ();
+	}
+}

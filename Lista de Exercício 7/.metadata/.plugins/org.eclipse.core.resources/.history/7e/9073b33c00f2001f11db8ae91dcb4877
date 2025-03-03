@@ -1,0 +1,13 @@
+package exercicio;
+
+public class Socio {
+	private Dependente dependente;
+	
+	public Socio(Dependente dependente) {
+		this.dependente = null;
+	}
+
+	public void adicionarDependente() {
+		this.dependente = new Dependente(null, 0, null, 0, null, null, null, null, 0);
+	}
+}
